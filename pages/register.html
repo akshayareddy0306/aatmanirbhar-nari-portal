@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create your account — Aatmanirbhar Nari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <a href="index.html" class="back-home">&larr; Back to home</a>
+
+    <div class="auth-title">Create your account</div>
+    <div class="auth-subtitle">Tell us how you'll use Aatmanirbhar Nari</div>
+
+    <!-- Role selection -->
+    <div class="role-grid">
+      <div class="role-card selected" id="role-customer" data-role="customer">
+        <div class="icon">&#128717;</div>
+        <h4>I want to buy</h4>
+        <p>Browse and purchase</p>
+      </div>
+      <div class="role-card" id="role-seller" data-role="seller">
+        <div class="icon">&#128188;</div>
+        <h4>I want to sell</h4>
+        <p>List my business</p>
+      </div>
+    </div>
+
+    <form id="register-form">
+
+      <!-- Common personal details -->
+      <div class="field">
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" required placeholder="Your full name">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="name@email.com">
+      </div>
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" required placeholder="10-digit mobile number">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="Create a password">
+      </div>
+
+      <!-- Customer-only field -->
+      <div class="field" id="location-field">
+        <label for="location">Your location</label>
+        <input type="text" id="location" placeholder="City, State">
+      </div>
+
+      <!-- Seller-only fields -->
+      <div id="business-fields">
+        <div class="form-section-title">Business details</div>
+
+        <div class="field">
+          <label for="business-name">Business name</label>
+          <input type="text" id="business-name" placeholder="e.g. Meera's Mehendi & Jewels">
+        </div>
+        <div class="field">
+          <label for="business-category">Business category</label>
+          <select id="business-category">
+            <option value="">Select a category</option>
+            <option>Food</option>
+            <option>Fashion</option>
+            <option>Beauty</option>
+            <option>Jewelry</option>
+            <option>Handicrafts</option>
+            <option>Education</option>
+            <option>Technology</option>
+            <option>Agriculture</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="business-location">Business location</label>
+          <input type="text" id="business-location" placeholder="City, State">
+        </div>
+        <div class="field">
+          <label for="business-description">Tell us about your business</label>
+          <textarea id="business-description" placeholder="A short description of what you make or offer"></textarea>
+        </div>
+      </div>
+
+      <div class="form-error" id="form-error">Please fill in all required fields.</div>
+
+      <button type="submit" class="btn btn-primary auth-submit">Create account</button>
+    </form>
+
+    <div class="switch-line">Already have an account? <a href="login.html">Login</a></div>
+  </div>
+</div>
+
+<script src="js/register.js"></script>
+</body>
+</html>
